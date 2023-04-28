@@ -1,3 +1,11 @@
-let heading = document.querySelectorAll(".accordion h3");
+let heading = document.getElementsByClassName(".acc-head");
 
-console.log(heading)
+
+console.log(heading);
+
+heading.forEach((element) => {
+    element.addEventListener("click", (event) => {
+        console.log(event.target)
+    })    
+});
+
