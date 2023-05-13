@@ -1,3 +1,7 @@
 p{
     display: none;
 }
+
+.acc-head:hover{
+    cursor: pointer;
+}
