@@ -1,22 +1,22 @@
-const heading = document.getElementsByClassName("acc-head");
-
+let heading = document.getElementsByClassName("acc-head");
+let i;
 
 console.log(heading);
 
 
-for(let i=0; i<heading.length; i++){
-    heading[i].addEventListener("click", (event)=>{
+for(i=0; i<heading.length; i++){
+    heading[i].addEventListener("click", function(){
         // console.log(event.target)
         this.classList.toggle("active");
 
         
-        let p = this.nextElementSibling;
-        if (p.style.display === "block") {
-          p.style.display = "none";
+        let para = this.nextElementSibling;
+        if (para.style.display === "block") {
+          para.style.display = "none";
         } else {
-          p.style.display = "block";
+          para.style.display = "block";
         }
-    })
+    });
 }
 
 // heading.forEach(element => {
