@@ -1,28 +1,17 @@
 let heading = document.getElementsByClassName("acc-head");
-let i;
 
 console.log(heading);
 
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
 
-for(i=0; i<heading.length; i++){
-    heading[i].addEventListener("click", function(){
-        // console.log(event.target)
-        this.classList.toggle("active");
-
-        
-        let para = this.nextElementSibling;
-        if (para.style.display === "block") {
-          para.style.display = "none";
-        } else {
-          para.style.display = "block";
-        }
-    });
+    /* Toggle between hiding and showing the active panel */
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
-
-// heading.forEach(element => {
-//     element.addEventListener("click", (event)=> {
-//         console.log(event.target);
-//     })
-// });
-
-  

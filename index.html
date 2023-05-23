@@ -7,7 +7,7 @@
     <title>Accordion Webapp</title>
 
     <link rel="stylesheet" href="./style.css">
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 </head>
 <body>
     <div class="main">
@@ -57,12 +57,38 @@
                 <p>Scarecrow has taken over Gotham and intends to release a powerful fear toxin in the entire city. He has the help of a new villain who calls himself the Arkham Knight. Can Batman stop him before it's too late, or will he finally let the "demons" inside his head take over?</p>
 
             </div>
+
         </div>
-
+        
+        
     </div>
+    
+    
 
+    
 
 </body>
+
+<script>
+    
+    let head = document.getElementsByClassName("acc-head");
+    let i;
+
+    console.log(head);
+
+    for (i = 0; i < head.length; i++) {
+        head[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            let para = this.nextElementSibling;
+            if (para.style.display === "block") {
+                para.style.display = "none";
+            } else {
+                para.style.display = "block";
+            }
+        });
+    }
+</script>
 
 
 </html>
